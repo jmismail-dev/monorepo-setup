@@ -13,6 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                   npm install
                    cd client/
                    npm install
                    npm run build
@@ -23,7 +24,7 @@ pipeline {
             steps {
                 sh 'sudo rm -rf /var/www/monorepo'
                 sh "cd ${WORKSPACE}/dist && ls"
-                sh "sudo cp -r ${WORKSPACE}/dist/ /var/www/monorepo/"
+                sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/monorepo/"
             }
         }
     }
