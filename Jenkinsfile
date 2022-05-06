@@ -23,6 +23,7 @@ pipeline {
             steps {
                 sh 'sudo rm -rf /var/www/monorepo'
                 sh "cd ${WORKSPACE}/dist && ls"
+                sh "sudo cp -r ${WORKSPACE}/dist/ /var/www/monorepo/"
             }
         }
     }
