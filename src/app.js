@@ -4,7 +4,7 @@ const port = 7000
 
 app.get('/', (req, res) => {
     res.send({
-        message: 'Hello Мухаммед!, Welcome to pm2'
+        message: 'Hello Мухаммед! '
     })
 })
 
