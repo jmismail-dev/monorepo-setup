@@ -22,9 +22,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'sudo rm -rf /var/www/monorepo'
+                sh 'sudo rm -rf /var/www/jenkins-monorepo'
                 sh "cd ${WORKSPACE} && ls"
-                sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/monorepo/"
+                sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/jenkins-monorepo"
             }
         }
     }
