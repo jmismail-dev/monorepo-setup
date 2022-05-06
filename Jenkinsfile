@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage('Restart Process' {
+        stage('Restart Process') {
             steps {
                 sh '''
                     #!/bin/sh
@@ -37,6 +37,6 @@ pipeline {
                     echo "ALL RESTARTED"
                  '''
             }
-        })
+        }
     }
 }
