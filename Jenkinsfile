@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'sudo rm -rf /var/www/monorepo'
-                sh "cd ${WORKSPACE}/dist && ls"
+                sh "cd ${WORKSPACE} && ls"
                 sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/monorepo/"
             }
         }
