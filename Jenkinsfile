@@ -3,7 +3,7 @@ pipeline {
     agent any
     tools { nodejs 'NodeJs' }
     stages {
-        stage('Test Environment') {
+        stage('Test Npm') {
             steps {
                 sh '''
                     npm --version
@@ -25,6 +25,7 @@ pipeline {
                 sh 'sudo rm -rf /var/www/jenkins-monorepo'
                 sh "cd ${WORKSPACE} && ls"
                 sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/jenkins-monorepo"
+                sh "pm2 restart 0"
             }
         }
     }
