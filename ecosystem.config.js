@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     script: './src/app.js',
-    watch: './src'
+    watch: true
   }],
 
   // deploy: {
