@@ -1,7 +1,7 @@
 /* groovylint-disable-next-line CompileStatic */
 pipeline {
     agent any
-    tools : { nodejs 'NodeJs' }
+    tools { nodejs 'NodeJs' }
     stages {
         stage('Test Environment') {
             steps {
