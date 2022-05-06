@@ -27,5 +27,16 @@ pipeline {
                 sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/jenkins-monorepo"
             }
         }
+
+        stage('Restart Process' {
+            steps {
+                sh '''
+                    #!/bin/sh
+                    echo "RESTARTING ALL"
+                    sudo pm2 restart all
+                    echo "ALL RESTARTED"
+                 '''
+            }
+        })
     }
 }
