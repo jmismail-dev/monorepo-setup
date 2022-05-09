@@ -25,7 +25,7 @@ pipeline {
                 sh 'sudo rm -rf /var/www/jenkins-monorepo'
                 sh "cd ${WORKSPACE} && ls"
                 sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/jenkins-monorepo"
-                sh "sudo cp -r ${WORKSPACE}/ /home/jmismail/jenkins-monorepo"
+                sh "sudo cp -r ${WORKSPACE}/monorepo /home/jmismail/jenkins-monorepo"
             }
         }
 
