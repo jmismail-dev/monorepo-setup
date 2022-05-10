@@ -4,8 +4,7 @@ const port = 7000
 
 app.get('/api', (req, res) => {
     res.send({
-        message: 'Hello Мухаммед! ',
-        change : 'This is a change from us!!'
+        message: 'Hello Mohamed! '
     })
 })
 
