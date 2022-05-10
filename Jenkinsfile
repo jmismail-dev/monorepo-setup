@@ -29,7 +29,6 @@ pipeline {
                 sh "cd ${WORKSPACE}/ && ls"
                 sh'''
                    #!/bin/bash
-                   shopt -s extglob
                    sh 'sudo cp -r !(client) /home/jmismail/'
                 '''
             }
