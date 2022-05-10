@@ -28,7 +28,7 @@ pipeline {
                 // sh "sudo cp -r ${WORKSPACE}/ /home/jmismail/" // Copy all
                 sh "cd ${WORKSPACE}/ && ls"
                 // sh 'sudo cp -r !(client) /home/jmismail/'
-                sh "sudo rsync -av --progress --exclude='client' ${WORKSPACE}/ /home/jmismail/"
+                sh "sudo rsync -av --progress --exclude='client' ${WORKSPACE}/ /home/jmismail/monorepo"
             }
         }
 
