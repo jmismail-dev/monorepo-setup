@@ -26,7 +26,8 @@ pipeline {
                 sh "cd ${WORKSPACE} && ls"
                 sh "sudo cp -r ${WORKSPACE}/client/dist/ /var/www/jenkins-monorepo"
                 // sh "sudo cp -r ${WORKSPACE}/ /home/jmismail/" // Copy all
-                sh "cd ${WORKSPACE}/ && shopt -s extglob && sudo cp -r !(client) /home/jmismail/"
+                sh "cd ${WORKSPACE}/ && shopt -s extglob"
+                // sh 'sudo cp -r !(client) /home/jmismail/'
             }
         }
 
