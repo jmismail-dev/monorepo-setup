@@ -31,16 +31,5 @@ pipeline {
                 sh "sudo rsync -av --progress --exclude='client' ${WORKSPACE}/ /home/jmismail/monorepo"
             }
         }
-
-    // stage('Restart Process') {
-    //     steps {
-    //         sh '''
-    //             #!/bin/sh
-    //             echo "RESTARTING ALL"
-    //             sudo pm2 restart all
-    //             echo "ALL RESTARTED"
-    //          '''
-    //     }
-    // }
     }
 }
